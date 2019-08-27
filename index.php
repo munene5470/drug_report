@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="colorlib.com">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Nairobi  | Drug rRporting portal</title>
+<title>Drug Reporting portal</title>
 
 <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
@@ -20,7 +20,7 @@
 <h2>Drug<span> Report </span></h2>
 <p class="title">County Drug Report. </p>
 <p class="desc">
-Fill in all details zeros where no information was collected.
+Fill in all details with zeros where no information was collected.
 </p>
 <img style="margin-top:-50%" src="images/signup-img.jpg" alt="" class="">
 </div>
@@ -30,7 +30,7 @@ Fill in all details zeros where no information was collected.
 <form action="get.php" method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">
     <h3></h3>
 <fieldset>
-    <span class="step-current">Step 2 / 11</span>
+    <span class="step-current">Step 1 / 5</span>
     <div style="margin-top:-20%" class="form-group">
         <span style="position:absolute; font-size:16px; font-weight:700; color:#888">County</span>
         <select id="county" name="selectname1"style="font-weight:700; color:#888;font-size:18px;width:100%; margin-top:10%; padding:10px 10px 10px 10px">
@@ -82,19 +82,11 @@ Fill in all details zeros where no information was collected.
             <option value='West Pokot'>West Pokot</option>
             <option value='wajir'>wajir</option>
         </select>
-        <div class="form-group">
-            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Start Date</span>
-            <input type="Date" id="start_date" placeholder="Start Date">
-        </div>
-        <div class="form-group">
-            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">End Date</span>
-            <input type="Date" id="end_date" placeholder="Start Date">
-        </div>
     </div>
 </fieldset>
 <h3></h3>
 <fieldset>
-<span class="step-current">Alcoholic Drinks 1 / 11</span>
+<span class="step-current">Alcoholic Drinks 2 / 5</span>
 <div style="margin-top:-20%" class="form-group">
     <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Chang'aa in (Ltrs)</span>
 <input type="number" id="changaa" placeholder="eg,1000">
@@ -111,7 +103,7 @@ Fill in all details zeros where no information was collected.
 <h3></h3>
 
 <fieldset>
-<span class="step-current">Step 2 / 11</span>
+<span class="step-current">Step 3 / 5</span>
 <div style="margin-top:-20%" class="form-group">
     <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Bhang rolls</span>
     <input type="number" id="rolls" placeholder="eg,10" >
@@ -128,14 +120,14 @@ Fill in all details zeros where no information was collected.
 
 <h3></h3>
 <fieldset>
-<span class="step-current">Step 3 / 11</span>
+<span class="step-current">Step 4 / 5</span>
 <div style="margin-top:-20%" class="form-group">
     <input type="number" id="heroin" placeholder="Cocaine,Heroin and Others (Sachets)">
 </div>
 </fieldset>
 <h3></h3>
 <fieldset>
-<span class="step-current">Step 4 / 11</span>
+<span class="step-current">Step 5 / 5</span>
 <div style="margin-top:-20%" class="form-group">
     <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Total fines (Kshs)</span>
     <input type="number" id="fines" placeholder="eg100,000">
