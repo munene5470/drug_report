@@ -6,7 +6,7 @@
  * Time: 7:24 PM
  */
 
-$conn = new mysqli("localhost","root","","county");
+$conn = new mysqli("localhost","root","root","county");
 if($conn->connect_error){
     die("Connection failed");
 }
