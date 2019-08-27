@@ -1,7 +1,7 @@
  (function($){
     var form=$("#signup-form");
     form.steps({headerTag:"h3",bodyTag:"fieldset",transitionEffect:"fade",labels:{previous:'Previous',next:'Next',
-    finish:'Calculate',current:''},titleTemplate:'<h3 class="title">#title#</h3>',onFinished:function(event,currentIndex)
+    finish:'Submit',current:''},titleTemplate:'<h3 class="title">#title#</h3>',onFinished:function(event,currentIndex)
     {$.ajax({
     url: "save.php",
     method: "POST",
