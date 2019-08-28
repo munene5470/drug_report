@@ -14,7 +14,7 @@ VALUES ('$county',$changaa,$kangara,$t_drinks,$spirits,$counterfeit,$rolls,$plan
 
 if($conn->query($sql)){
 
-
+    echo "Success";
 }else{
     echo "failed";
     echo $conn->error;

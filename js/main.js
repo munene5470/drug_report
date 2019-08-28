@@ -34,14 +34,14 @@
                                     text: "Your information! was submitted Successfully",
                                     type: 'success',
                                     confirmButtonColor: '#3085d6',
-                                    confirmButtonText: 'Yes, submit!'
+                                    confirmButtonText: 'Ok'
                                 }).then((result) => {
 
 
                                 })
 
                                 setTimeout(function (){
-                                    location.reload(true);
+                                    location.reload();
 
                                 }, 4000);
 
@@ -52,7 +52,7 @@
                                     text: "an error occurred!",
                                     type: 'error',
                                     confirmButtonColor: '#3085d6',
-                                    confirmButtonText: 'Yes, submit!'
+                                    confirmButtonText: 'Retry!'
                                 }).then((result) => {
 
 
