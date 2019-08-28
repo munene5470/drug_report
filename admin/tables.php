@@ -31,6 +31,18 @@ $result = mysqli_query($connect,$query);
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
+<style>
+    table.table-bordered{
+        border:1px solid blue;
+        margin-top:20px;
+    }
+    table.table-bordered > thead > tr > th{
+        border:1px solid blue;
+    }
+    table.table-bordered > tbody > tr > td{
+        border:1px solid blue;
+    }
+</style>
 
 <body id="page-top">
 
@@ -42,7 +54,7 @@ $result = mysqli_query($connect,$query);
     <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -101,7 +113,7 @@ $result = mysqli_query($connect,$query);
 
           <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800">Reports</h1>
-          <p class="mb-4">This are ypur weekly reports as submitted from different counties .</p>
+          <p class="mb-4">This are your weekly reports as submitted from different counties .</p>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
@@ -113,21 +125,23 @@ $result = mysqli_query($connect,$query);
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                     <tr>
-                        <th width="5%">ID</th>
-                        <th width="5%">COUNTY</th>
-                        <th width="5%">CHANGAA</th>
-                        <th width="5%">KANGARA</th>
-                        <th width="5%">T_DRINKS</th>
-                        <th width="5%">SPIRITS</th>
-                        <th width="5%">COUNTERFEIT</th>
-                        <th width="5%">ROLLS</th>
-                        <th width="5%">PLANTS</th>
-                        <th width="5%">BROOMS</th>
-                        <th width="5%">STONES</th>
-                        <th width="5%">KGS</th>
-                        <th width="5%">COCAINE</th>
-                        <th width="5%">FINES</th>
-                        <th width="5%">ARRESTS</th>
+                        <th rowspan="2" width="5%">County</th>
+                        <th rowspan="2" width="5%">Chang'aa(Lts)</th>
+                        <th rowspan="2" width="5%">Kangara(Lts)</th>
+                        <th rowspan="2" width="5%">Other Traditional Drinks(Lts)</th>
+                        <th rowspan="2" width="5%">Illegal neutral spirits(Lts)</th>
+                        <th rowspan="2" width="5%">Counterfeit alcoholic drinks/Unaccustomed drinks(lts)</th>
+                        <th style="text-align: center"; colspan="5">Bhang</th>
+                        <th rowspan="2" width="5%">Cocaine, Heroin and Others(Sachets)</th>
+                        <th rowspan="2" width="5%">Total fines</th>
+                        <th rowspan="2" width="5%">Total Arrests</th>
+                    </tr>
+                    <tr>
+                        <th width="5%">Rolls</th>
+                        <th width="5%">Plants</th>
+                        <th width="5%">Brooms</th>
+                        <th width="5%">Stones</th>
+                        <th width="5%">Kgs</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -136,7 +150,6 @@ $result = mysqli_query($connect,$query);
                     {
                         ?>
                         <tr>
-                            <td><?php echo $row["id"];?></td>
                             <td><?php echo $row["county"];?></td>
                             <td><?php echo $row["changaa"];?></td>
                             <td><?php echo $row["kangara"];?></td>
