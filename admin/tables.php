@@ -1,3 +1,12 @@
+
+
+
+<?php
+$connect = mysqli_connect("localhost", "root",
+    "", "county");
+$query = "SELECT * FROM reports ORDER BY id ASC";
+$result = mysqli_query($connect,$query);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,48 +100,63 @@
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-          <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p>
+          <h1 class="h3 mb-2 text-gray-800">Reports</h1>
+          <p class="mb-4">This are ypur weekly reports as submitted from different counties .</p>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Here is are all your reports</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
+                    <thead>
                     <tr>
-                      <th>County</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
+                        <th width="5%">ID</th>
+                        <th width="5%">COUNTY</th>
+                        <th width="5%">CHANGAA</th>
+                        <th width="5%">KANGARA</th>
+                        <th width="5%">T_DRINKS</th>
+                        <th width="5%">SPIRITS</th>
+                        <th width="5%">COUNTERFEIT</th>
+                        <th width="5%">ROLLS</th>
+                        <th width="5%">PLANTS</th>
+                        <th width="5%">BROOMS</th>
+                        <th width="5%">STONES</th>
+                        <th width="5%">KGS</th>
+                        <th width="5%">COCAINE</th>
+                        <th width="5%">FINES</th>
+                        <th width="5%">ARRESTS</th>
                     </tr>
-                  </thead>
+                    </thead>
                     <tbody>
                     <?php
-                    include "../conn.php";
-                    $sql = "select* from reports";
-                    $results = $conn->query($sql);
-                    while ($row=$results->fetch_assoc())
-                      echo "<tr><td>".$row['county']."</td></tr>";
+                    while ($row = mysqli_fetch_array($result))
+                    {
+                        ?>
+                        <tr>
+                            <td><?php echo $row["id"];?></td>
+                            <td><?php echo $row["county"];?></td>
+                            <td><?php echo $row["changaa"];?></td>
+                            <td><?php echo $row["kangara"];?></td>
+                            <td><?php echo $row["t_drinks"];?></td>
+                            <td><?php echo $row["spirits"];?></td>
+                            <td><?php echo $row["counterfeit"];?></td>
+                            <td><?php echo $row["rolls"];?></td>
+                            <td><?php echo $row["plants"];?></td>
+                            <td><?php echo $row["brooms"];?></td>
+                            <td><?php echo $row["stones"];?></td>
+                            <td><?php echo $row["kgs"];?></td>
+                            <td><?php echo $row["cocaine"];?></td>
+                            <td><?php echo $row["fines"];?></td>
+                            <td><?php echo $row["arrests"];?></td>
 
-
+                        </tr>
+                        <?php
+                    }
                     ?>
                     </tbody>
-                  <tfoot>
-                    <tr>
-                      <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
-                    </tr>
-                  </tfoot>
                   <tbody>
                   </tbody>
                 </table>
@@ -197,11 +221,26 @@
   <script src="js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+  <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+  <script type="text/javascript" language="javascript" src="../../../../examples/resources/demo.js"></script>
+  <script type="text/javascript" class="init">
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
+
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js"></script>
+  <script>
+  </script>
 
 </body>
 

@@ -30,10 +30,11 @@ Fill in all details with zeros where no information was collected.
 <form action="get.php" method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data">
     <h3></h3>
 <fieldset>
-    <span class="step-current">Step 1 / 5</span>
+    <span class="step-current">Step 1 / 8</span>
     <div style="margin-top:-20%" class="form-group">
         <span style="position:absolute; font-size:16px; font-weight:700; color:#888">County</span>
         <select id="county" name="selectname1"style="font-weight:700; color:#888;font-size:18px;width:100%; margin-top:10%; padding:10px 10px 10px 10px">
+            <option value='Select'>Select County</option>
             <option value='Baringo'>Baringo</option>
             <option value='Bomet'>Bomet</option>
             <option value='Bungoma'>Bungoma</option>
@@ -86,48 +87,76 @@ Fill in all details with zeros where no information was collected.
 </fieldset>
 <h3></h3>
 <fieldset>
-<span class="step-current">Alcoholic Drinks 2 / 5</span>
+    <span class="step-current">Dates 2 / 9</span>
+    <div style="margin-top:-20%" class="form-group">
+        <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Report collection start date</span>
+        <input type="date" id="start_date">
+        <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Report collection start end date</span>
+        <input type="date" id="end_date">
+
+    </div>
+</fieldset>
+    <h3></h3>
+<fieldset>
+<span class="step-current">Alcoholic Drinks 3 / 9</span>
 <div style="margin-top:-20%" class="form-group">
     <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Chang'aa in (Ltrs)</span>
 <input type="number" id="changaa" placeholder="eg,1000">
     <span style="position:absolute; font-size:16px; font-weight:700; color:#888">kangara in (Ltrs)</span>
 <input type="number" id="kangara" placeholder="eg,1000">
-    <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Other Traditional Drinks in (Ltrs)</span>
-<input type="number" id="t_drinks" placeholder="eg,1000">
-    <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Illegal neutral spirits in (Ltrs)</span>
-<input type="number" id="spirits" placeholder="eg,1000">
-    <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Counterfeit/Unaccustomed Drinks in (Ltrs)</span>
-<input type="number" id="counterfeit" placeholder="eg,1000">
+
 </div>
 </fieldset>
 <h3></h3>
-
+    <fieldset>
+        <span class="step-current">Alcoholic Drinks 4 / 9</span>
+        <div style="margin-top:-20%" class="form-group">
+            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Other Traditional Drinks in (Ltrs)</span>
+            <input type="number" id="t_drinks" placeholder="eg,1000">
+            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Illegal neutral spirits in (Ltrs)</span>
+            <input type="number" id="spirits" placeholder="eg,1000">
+        </div>
+    </fieldset>
+    <h3></h3>
 <fieldset>
-<span class="step-current">Step 3 / 5</span>
+<span class="step-current">Bhang 4 / 9</span>
 <div style="margin-top:-20%" class="form-group">
+    <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Counterfeit/Unaccustomed Drinks in (Ltrs)</span>
+    <input type="number" id="counterfeit" placeholder="eg,1000">
     <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Bhang rolls</span>
     <input type="number" id="rolls" placeholder="eg,10" >
-    <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Bhang Plants</span>
-    <input type="number" id="plants" placeholder="eg,100">
-    <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Bhang Brooms</span>
-    <input type="number" id="brooms" placeholder="eg,100">
-    <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Bhang Stones</span>
-    <input type="number" id="stones" placeholder="eg,1000">
-    <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Bhang Kgs</span>
-    <input type="number" id="kgs" placeholder="eg,100">
 </div>
 </fieldset>
-
+<h3></h3>
+    <fieldset>
+        <span class="step-current">Bhang 5 / 9</span>
+        <div style="margin-top:-20%" class="form-group">
+            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Bhang Plants</span>
+            <input type="number" id="plants" placeholder="eg,100">
+            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Bhang Brooms</span>
+            <input type="number" id="brooms" placeholder="eg,100">
+        </div>
+    </fieldset>
 <h3></h3>
 <fieldset>
-<span class="step-current">Step 4 / 5</span>
+        <span class="step-current">Bhang 6 / 9</span>
+        <div style="margin-top:-20%" class="form-group">
+            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Bhang Stones</span>
+            <input type="number" id="stones" placeholder="eg,1000">
+            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Bhang Kgs</span>
+            <input type="number" id="kgs" placeholder="eg,100">
+        </div>
+</fieldset>
+<h3></h3>
+<fieldset>
+<span class="step-current">Others 7 / 9</span>
 <div style="margin-top:-20%" class="form-group">
     <input type="number" id="heroin" placeholder="Cocaine,Heroin and Others (Sachets)">
 </div>
 </fieldset>
 <h3></h3>
 <fieldset>
-<span class="step-current">Step 5 / 5</span>
+<span class="step-current">Fines & arrests 8 / 9</span>
 <div style="margin-top:-20%" class="form-group">
     <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Total fines (Kshs)</span>
     <input type="number" id="fines" placeholder="eg100,000">
@@ -143,7 +172,7 @@ Fill in all details with zeros where no information was collected.
 <!-- <div style="display:none">
 
 </div> -->
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.16.3/dist/sweetalert2.all.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
