@@ -46,8 +46,8 @@
                     <img src="images/index.png" class="rounded" height="60">
                 </div>
                 <div class="form-group">
-                    <label>Counties:</label>
-                    <select class="form-control" name="county" required>
+                    <label>User county:</label>
+                    <select class="form-control" id="county"  name="county" required>
                         <option value='Select'>Select County</option>
                         <option value='Baringo'>Baringo</option>
                         <option value='Bomet'>Bomet</option>

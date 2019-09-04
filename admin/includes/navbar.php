@@ -35,7 +35,11 @@
             <i class="fas fa-fw fa-users"></i>
             <span>View Users</span></a>
     </li>
-    <!-- Divider -->
+    <li class="nav-item">
+        <a class="nav-link" href="forgot_password.php">
+            <i class="fas fa-fw fa-lock-open"></i>
+            <span>Reset Admin Password</span></a>
+    </li>
     <hr class="sidebar-divider d-none d-md-block">
 
     <!-- Sidebar Toggler (Sidebar) -->

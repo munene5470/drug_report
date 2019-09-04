@@ -11,7 +11,6 @@ if(isset($_POST["login"]))
     }else
     {
 // Define $username and $password
-        //$county=$_POST['county'];
         $username=$_POST['username'];
         $password=$_POST['password'];
 
@@ -24,7 +23,7 @@ if(isset($_POST["login"]))
         $password = md5($password);
 
 //Check username and password from database
-        $sql="SELECT * FROM users WHERE username='$username' and password='$password'";
+        $sql="SELECT * FROM admin WHERE username='$username' and password='$password'";
         $result=mysqli_query($connect,$sql);
         $row=mysqli_fetch_array($result,MYSQLI_ASSOC);
 
@@ -33,12 +32,12 @@ if(isset($_POST["login"]))
 
         if(mysqli_num_rows($result) == 1)
         {
-            $_SESSION['user'] = $username; // Initializing Session
+            $_SESSION['admin'] = $username; // Initializing Session
             header("location: dashboard.php"); // Redirecting To Other Page
         }else
         {
             echo"<script>alert('Wrong username or password, please try again!')</script>";
-            echo"<script>window.open('user_login.php', '_self')</script>";
+            echo"<script>window.open('index.php', '_self')</script>";
 
 
         }
