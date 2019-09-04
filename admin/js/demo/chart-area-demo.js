@@ -105,7 +105,7 @@ var myLineChart = new Chart(ctx, {
       yPadding: 15,
       displayColors: false,
       intersect: false,
-      mode: 'index',
+      mode: 'drug_report.php',
       caretPadding: 10,
       callbacks: {
         label: function(tooltipItem, chart) {

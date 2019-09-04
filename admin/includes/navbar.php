@@ -25,7 +25,16 @@
             <i class="fas fa-fw fa-table"></i>
             <span>View Reports</span></a>
     </li>
-
+    <li class="nav-item">
+        <a class="nav-link" href="add_users.php">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Add Users</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="view_users.php">
+            <i class="fas fa-fw fa-users"></i>
+            <span>View Users</span></a>
+    </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

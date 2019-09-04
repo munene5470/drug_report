@@ -33,14 +33,14 @@ $result = mysqli_query($connect,$query);
 </head>
 <style>
     table.table-bordered{
-        border:1px solid blue;
+        border:1px solid green;
         margin-top:20px;
     }
     table.table-bordered > thead > tr > th{
-        border:1px solid blue;
+        border:1px solid green;
     }
     table.table-bordered > tbody > tr > td{
-        border:1px solid blue;
+        border:1px solid green;
     }
 </style>
 
@@ -54,7 +54,7 @@ $result = mysqli_query($connect,$query);
     <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.php">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
@@ -131,7 +131,7 @@ $result = mysqli_query($connect,$query);
                         <th rowspan="2" width="5%">Other Traditional Drinks(Lts)</th>
                         <th rowspan="2" width="5%">Illegal neutral spirits(Lts)</th>
                         <th rowspan="2" width="5%">Counterfeit alcoholic drinks/Unaccustomed drinks(lts)</th>
-                        <th style="text-align: center"; colspan="5">Bhang</th>
+                        <th colspan="5">Bhang</th>
                         <th rowspan="2" width="5%">Cocaine, Heroin and Others(Sachets)</th>
                         <th rowspan="2" width="5%">Total fines</th>
                         <th rowspan="2" width="5%">Total Arrests</th>
@@ -217,7 +217,7 @@ $result = mysqli_query($connect,$query);
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="../user_login.php">Logout</a>
         </div>
       </div>
     </div>

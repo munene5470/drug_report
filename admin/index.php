@@ -1,169 +1,53 @@
-<?php
-     include('includes/header.php');
-     include ('includes/navbar.php');
-     include ('includes/con.php');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Admin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+</head>
 
-     ?>
-<!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
+<body>
 
-      <!-- Main Content -->
-      <div id="content">
+<div style="margin-top:5%" class="container">
 
-        <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+    <div class="col-sm-4">
+    </div>
 
-          <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-            <i class="fa fa-bars"></i>
-          </button>
+    <got class="row">
 
-        </nav>
-        <!-- End of Topbar -->
-
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
-    <!-- Content Row -->
-          <div class="row">
-
-            <!-- Report (Daily) -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><a href="daily.php">Uploaded Today</a></div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          <?php
-                          $date = date("Y-m-d");
-                          $sql=$query = "select * from reports where  `date` >= DATE_SUB(CURDATE(),INTERVAL 12 HOUR )";
-                          if ($result=mysqli_query($connect,$sql))
-                          {
-                              // Return the number of rows in result set
-                              $rowcount=mysqli_num_rows($result);
-                              printf($rowcount);
-                              // Free result set
-                              mysqli_free_result($result);
-                          }
-                          else{
-                              echo "<div class='alert alert-danger'>
-                                         <strong>No reports found</strong>
-                            </div>";
-                          }
-
-                          ?>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
+        <div class="col-sm-4" style="background:#eeeeee;">
+            <h2></h2>
+            <form id="formID" action="verify_admin.php" method="POST">
+                <div class="text-center" >
+                    <img src="img/index.png" class="rounded" height="60">
                 </div>
-              </div>
-            </div>
+                <div class="form-group">
+                    <label>Username:</label>
 
-            <!-- Report (Weekly) -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-success shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1"><a href="weekly.php">Uploaded This Week</a></div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          <?php
-                          $date = date("Y-m-d");
-                          $sql=$query = "select * from reports where  `date` >= DATE_SUB(CURDATE(),INTERVAL 7 DAY )";
-                          if ($result=mysqli_query($connect,$sql))
-                          {
-                              // Return the number of rows in result set
-                              $rowcount=mysqli_num_rows($result);
-                              printf($rowcount);
-                              // Free result set
-                              mysqli_free_result($result);
-                          }
-                          else{
-                               echo "<div class='alert alert-danger'>
-                                         <strong>No reports found</strong>
-                            </div>";
-                          }
+                    <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username">
 
-                          ?>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            </div>
+                <div class="form-group">
+                    <label>Password:</label>
 
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="password">
 
-           
-            <!-- Report (Monthly) -->
-            <div class="col-xl-3 col-md-6 mb-4">
-              <div class="card border-left-warning shadow h-100 py-2">
-                <div class="card-body">
-                  <div class="row no-gutters align-items-center">
-                    <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><a href="monthly.php">Uploaded This Month</a> </div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">
-                          <?php
-                          $date = date("Y-m-d");
-                          $sql=$query = "select * from reports where  `date` >= DATE_SUB(CURDATE(),INTERVAL 1 MONTH )";
-                          if ($result=mysqli_query($connect,$sql))
-                          {
-                              // Return the number of rows in result set
-                              $rowcount=mysqli_num_rows($result);
-                              printf($rowcount);
-                              // Free result set
-                              mysqli_free_result($result);
-                          }
-                          else{
-                              echo "<div class='alert alert-danger'>
-                                         <strong>No reports found</strong>
-                            </div>";
-                          }
-                          mysqli_close($connect)
-                          ?>
-                      </div>
-                    </div>
-                    <div class="col-auto">
-                      <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                    </div>
-                  </div>
                 </div>
+                <div class="form-group">
+                <input type="submit" name="login" id="register" value="Login" class="btn btn-success" style="margin-left: 40%;"/></form>
+        <p>Forgot password?<a href='forgot_password.php'>Click Here</a></p>
               </div>
-            </div>
-          </div>
+                </div>
 
-          <div class="row">
-
-            <!-- Content Column -->
-            <div class="col-lg-6 mb-4">
-
-              <!-- Project Card Example -->
-
-              <!-- Illustrations -->
-
-            </div>
-          </div>
+            </form>
 
         </div>
-        <!-- /.container-fluid -->
-
-      </div>
-
-
-
-      </div>
-      <!-- End of Main Content -->
-
     </div>
-    <!-- End of Content Wrapper -->
+</div>
 
-  </div>
-  <!-- End of Page Wrapper -->
-
-
+</body>
+</html>
