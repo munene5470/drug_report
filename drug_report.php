@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<?php
+session_start();
+include("conn.php");
+if(!isset($_SESSION['user'])){
+    header("Location: user_login.php");
+}
+
+else{
+?>
+}
+
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,12 +25,14 @@
 </head>
 <body>
 <div class="main">
+
     <div class="container">
+        <a href="logout.php">Log out user</a>
         <div class="signup-content">
             <div class="signup-desc">
                 <div class="signup-desc-content">
                     <h2>Drug<span> Report </span></h2>
-                    <p class="title">County Daily Drug Report. </p>
+                    <p class="title">National illicit brews and drugs repoting portal. </p>
                     <p class="desc">
                         Fill in all details with zeros where no information was collected.
                     </p>
@@ -89,9 +103,8 @@
                     <fieldset>
                         <span class="step-current">Dates 2 / 9</span>
                         <div style="margin-top:-20%" class="form-group">
-                            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Report collection  date</span>
+                            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Report submission  date</span>
                             <input type="date" id="start_date">
-
 
                         </div>
                     </fieldset>
@@ -112,16 +125,20 @@
                         <div style="margin-top:-20%" class="form-group">
                             <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Other Traditional Drinks in (Ltrs)</span>
                             <input type="number" id="t_drinks" placeholder="eg,1000">
-                            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Illegal neutral spirits in (Ltrs)</span>
-                            <input type="number" id="spirits" placeholder="eg,1000">
+                            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Total Alcohol poured/Destroyed (Ltrs)</span>
+                            <input type="number" id="poored" placeholder="eg,1000">
+                            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Equipment Destroyed</span>
+                            <input type="number" id="equipment" placeholder="eg,1000">
                         </div>
                     </fieldset>
                     <h3></h3>
                     <fieldset>
-                        <span class="step-current">Bhang 4 / 9</span>
+                        <span class="step-current">Other Drinks And Bhang 4 / 9</span>
                         <div style="margin-top:-20%" class="form-group">
-                            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Counterfeit/Unaccustomed Drinks in (Ltrs)</span>
-                            <input type="number" id="counterfeit" placeholder="eg,1000">
+                            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">2 <sup>ND</sup> Generation Liquor (Ltrs)</span>
+                            <input type="number" id="liquor" placeholder="eg,1000">
+                            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Illegal Ethanol(Lts)</span>
+                            <input type="number" id="ethanol" placeholder="eg,10">
                             <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Bhang rolls</span>
                             <input type="number" id="rolls" placeholder="eg,10" >
                         </div>
@@ -157,10 +174,12 @@
                     <fieldset>
                         <span class="step-current">Fines & arrests 8 / 9</span>
                         <div style="margin-top:-20%" class="form-group">
+                            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Total arrests</span>
+                            <input type="number" id="arrests" placeholder="10">
+                            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Number Charged</span>
+                            <input type="number" id="charged" placeholder="eg100,000">
                             <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Total fines (Kshs)</span>
                             <input type="number" id="fines" placeholder="eg100,000">
-                            <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Number of arrest</span>
-                            <input type="number" id="arrests" placeholder="10">
                         </div>
                     </fieldset>
                 </form>
@@ -195,3 +214,4 @@
 </script>
 <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/a2bd7673/cloudflare-static/rocket-loader.min.js" data-cf-settings="6b6825c0d26fda4be87006a1-|49" defer=""></script></body>
 </html>
+<?php }  ?>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,8 +18,39 @@
         padding-top: 70px;
     }
 </style>
+<script>
+    function checkPass()
+    {
+        //Store the password field objects into variables ...
+        var pass1 = document.getElementById('pass1');
+        var pass2 = document.getElementById('pass2');
+        //Store the Confimation Message Object ...
+        var message = document.getElementById('confirmMessage');
+        //Set the colors we will be using ...
+        var goodColor = "#66cc66";
+        var badColor = "#ff6666";
+        //Compare the values in the password field
+        //and the confirmation field
+        if(pass1.value == pass2.value){
+            //The passwords match.
+            //Set the color to the good color and inform
+            //the user that they have entered the correct password
+            pass2.style.backgroundColor = goodColor;
+            message.style.color = goodColor;
+            message.innerHTML = "Passwords Match"
+        }else{
+            //The passwords do not match.
+            //Set the color to the bad color and
+            //notify the user.
+            pass2.style.backgroundColor = badColor;
+            message.style.color = badColor;
+            message.innerHTML = "Passwords Do Not Match!"
+        }
+    }
+
+</script>
 <body>
-<form action="reset.php" method="post">
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>"  method="post">
     <div class="form-gap"></div>
     <div class="container">
         <div class="row">
@@ -32,10 +64,10 @@
                             <div class="panel-body">
                                 <form  action="reset.php" id="register-form" role="form" autocomplete="off" class="form" method="post">
                                     <div class="form-group">
-                                        <input type="password" name="newpass"  placeholder="Enter new password" autocapitalize="off">
+                                        <input type="password" name="newpass" id="pass1"  placeholder="Enter new password" autocapitalize="off">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" name="confirm" placeholder="Confirm new password" autocomplete="off">
+                                        <input type="password" name="confirm"  id="pass2" onkeyup="checkPass(); return false; placeholder="Confirm new password" autocomplete="off">
                                     </div>
                                     <div class="form-group">
                                         <input name="submit-email" class="btn btn-lg btn-primary btn-block" value="Reset Password" type="submit">

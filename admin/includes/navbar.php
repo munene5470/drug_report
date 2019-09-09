@@ -37,13 +37,18 @@
     </li>
     <li class="nav-item">
         <a class="nav-link" href="forgot_password.php">
-            <i class="fas fa-fw fa-lock-open"></i>
+            <i class="fas fa-fw fa-lock"></i>
             <span>Reset Admin Password</span></a>
     </li>
     <hr class="sidebar-divider d-none d-md-block">
 
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
+        <li class="nav-item">
+            <a class="nav-link" href="logout.php">
+                <i class="fas fa-fw fa-power-off"></i>
+                <span>Logout</span></a>
+        </li>
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>
 

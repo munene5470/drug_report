@@ -113,7 +113,7 @@ $result = mysqli_query($connect,$query);
 
           <!-- Page Heading -->
           <h1 class="h3 mb-2 text-gray-800">Reports</h1>
-          <p class="mb-4">This are your weekly reports as submitted from different counties .</p>
+          <p class="mb-4">This are your reports as submitted from different counties .</p>
 
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
@@ -131,17 +131,14 @@ $result = mysqli_query($connect,$query);
                         <th rowspan="2" width="5%">Other Traditional Drinks(Lts)</th>
                         <th rowspan="2" width="5%">Illegal neutral spirits(Lts)</th>
                         <th rowspan="2" width="5%">Counterfeit alcoholic drinks/Unaccustomed drinks(lts)</th>
-                        <th colspan="5">Bhang</th>
+                        <th rowspan="2">Bhang Rolls</th>
+                        <th rowspan="2">Bhang Plants</th>
+                        <th rowspan="2">Bhang Brooms</th>
+                        <th rowspan="2">Bhang Stones</th>
+                        <th rowspan="2">Bhang Kgs</th>
                         <th rowspan="2" width="5%">Cocaine, Heroin and Others(Sachets)</th>
                         <th rowspan="2" width="5%">Total fines</th>
                         <th rowspan="2" width="5%">Total Arrests</th>
-                    </tr>
-                    <tr>
-                        <th width="5%">Rolls</th>
-                        <th width="5%">Plants</th>
-                        <th width="5%">Brooms</th>
-                        <th width="5%">Stones</th>
-                        <th width="5%">Kgs</th>
                     </tr>
                     </thead>
                     <tbody>

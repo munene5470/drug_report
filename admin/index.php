@@ -9,6 +9,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
+<style>
+    body{
+        background-image: url(img/niu-niu-5HzOtV-FSlw-unsplash.jpg);
+    }
+</style>
 
 <body>
 
@@ -17,9 +22,9 @@
     <div class="col-sm-4">
     </div>
 
-    <got class="row">
+    <got class="row justify-content-center">
 
-        <div class="col-sm-4" style="background:#eeeeee;">
+        <div class="col-sm-4" style="background:white;">
             <h2></h2>
             <form id="formID" action="verify_admin.php" method="POST">
                 <div class="text-center" >

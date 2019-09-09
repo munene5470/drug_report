@@ -1,10 +1,14 @@
 <?php
-     include('includes/header.php');
-     include ('includes/navbar.php');
-     include ('includes/connect.php');
+session_start();
+include("includes/connect.php");
+include('includes/header.php');
+include ('includes/navbar.php');
+if(!isset($_SESSION['admin'])){
+    header("Location: index.php");
+}
 
-
-     ?>
+else{
+?>
 <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
@@ -167,3 +171,4 @@
   <!-- End of Page Wrapper -->
 
 
+<?php }  ?>

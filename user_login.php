@@ -12,6 +12,7 @@
 <style>
     body {
         padding-top:50px;
+        background-image: url(images/niu-niu-5HzOtV-FSlw-unsplash.jpg);
     }
     fieldset {
         border: thin solid #ccc;
