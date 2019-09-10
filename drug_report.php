@@ -136,7 +136,7 @@ else{
                         <span class="step-current">Other Drinks And Bhang 4 / 9</span>
                         <div style="margin-top:-20%" class="form-group">
                             <span style="position:absolute; font-size:16px; font-weight:700; color:#888">2 <sup>ND</sup> Generation Liquor (Ltrs)</span>
-                            <input type="number" id="liquor" placeholder="eg,1000">
+                            <input type="number" id="spirits" placeholder="eg,1000">
                             <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Illegal Ethanol(Lts)</span>
                             <input type="number" id="ethanol" placeholder="eg,10">
                             <span style="position:absolute; font-size:16px; font-weight:700; color:#888">Bhang rolls</span>

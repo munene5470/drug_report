@@ -124,8 +124,6 @@ $result = mysqli_query($connect,$query);
                                         <th scope="col">Id</th>
                                         <th scope="col">County</th>
                                         <th scope="col">Username</th>
-                                        <th scope="col">Last login</th>
-                                        <th scope="col">Edit user</th>
                                         <th scope="col">Delete user</th>
                                     </tr>
                                     </thead>
@@ -139,11 +137,6 @@ $result = mysqli_query($connect,$query);
                                         <td><?php echo $row["id"];?></td>
                                         <td><?php echo $row["county"];?></td>
                                         <td><?php echo $row["username"];?></td>
-                                        <td><?php echo $row["last_logged"];?></td>
-                                        <td>
-                                            <a href="update_password.php?update_password=<?php echo $row['id'];?>"
-                                               class="btn btn-outline-success">Change password</a>
-                                        </td>
                                         <td>
                                             <a href="delete.php?delete=<?php echo $row['id'];?>"
                                                class="btn btn-outline-danger">Delete user</a>

@@ -10,7 +10,7 @@ include 'conn.php';
 
 extract($_POST);
 
-$sql = "INSERT INTO reports(county,changaa,kangara,t_drinks,alcohol_poored,equipment,liquor,ethanol,rolls,plants,brooms,stones,kgs,cocaine,arrests,number_charged,fines) 
+$sql = "INSERT INTO reports(county,changaa,kangara,t_drinks,alcohol_poored,equipment,spirits,ethanol,rolls,plants,brooms,stones,kgs,cocaine,arrests,number_charged,fines) 
 VALUES ('$county',$changaa,$kangara,$t_drinks,$poored,$equipment,$generation,$ethanol,$rolls,$plants,$brooms,$stones,$kgs,$cocaine,$arrests,$charged,$fines)";
 
 if($link->query($sql)){

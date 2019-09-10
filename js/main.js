@@ -25,7 +25,7 @@
                             url: "save.php",
                             method: "POST",
                             data:{county: $('#county').val(), startDate : $('#start_date').val(), endDate : $('#end_date').val(),ethanol :$('#ethanol').val(),changaa:$('#changaa').val(),kangara:$('#kangara').val(),equipment:$('#equipment').val(),charged:$('#charged').val(),
-                                poored:$('#poored').val(), generation: $('#liquor').val(),rolls: $('#rolls').val(), kgs: $('#kgs').val(),stones: $('#stones').val()
+                                poored:$('#poored').val(), generation: $('#spirits').val(),rolls: $('#rolls').val(), kgs: $('#kgs').val(),stones: $('#stones').val()
                                 ,plants:  $('#plants').val(),arrests:  $('#arrests').val(),fines:  $('#fines').val(),t_drinks: $('#t_drinks').val(),brooms:  $('#brooms').val(),cocaine:$('#heroin').val()},
                             success: function (returnhtml) {
                             if(returnhtml.toString()==="Success"){
@@ -130,7 +130,7 @@
                   ;
               case 3:
                   if(newIndex>currentIndex){
-                      if($('#spirits').val()===""||$('#t_drinks').val()===""){
+                      if($('#poored').val()===""||$('#t_drinks').val()===""){
                           Swal.fire({
                               type: 'error',
                               title: 'Oops...',

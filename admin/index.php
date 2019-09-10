@@ -44,7 +44,7 @@
                 </div>
                 <div class="form-group">
                 <input type="submit" name="login" id="register" value="Login" class="btn btn-success" style="margin-left: 40%;"/></form>
-        <p>Forgot password?<a href='forgot_password.php'>Click Here</a></p>
+
               </div>
                 </div>
 

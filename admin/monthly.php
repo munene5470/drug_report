@@ -32,18 +32,7 @@ $result = mysqli_query($connect,$query);
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
-<style>
-    table.table-bordered{
-        border:1px solid green;
-        margin-top:20px;
-    }
-    table.table-bordered > thead > tr > th{
-        border:1px solid green;
-    }
-    table.table-bordered > tbody > tr > td{
-        border:1px solid green;
-    }
-</style>
+
 <body id="page-top">
 
 <!-- Page Wrapper -->
@@ -114,66 +103,62 @@ $result = mysqli_query($connect,$query);
                 <!-- Page Heading -->
                 <h1 class="h3 mb-2 text-gray-800">Reports</h1>
                 <p class="mb-4">This are your weekly reports as submitted from different counties .</p>
-
-                <!-- DataTales Example -->
-                <div class="card shadow mb-4">
-                    <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Here is are all your reports</h6>
-                    </div>
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                <thead>
-                                <tr>
-                                    <th rowspan="2" width="5%">County</th>
-                                    <th rowspan="2" width="5%">Chang'aa(Lts)</th>
-                                    <th rowspan="2" width="5%">Kangara(Lts)</th>
-                                    <th rowspan="2" width="5%">Other Traditional Drinks(Lts)</th>
-                                    <th rowspan="2" width="5%">Illegal neutral spirits(Lts)</th>
-                                    <th rowspan="2" width="5%">Counterfeit alcoholic drinks/Unaccustomed drinks(lts)</th>
-                                    <th style="text-align: center"; colspan="5">Bhang</th>
-                                    <th rowspan="2" width="5%">Cocaine, Heroin and Others(Sachets)</th>
-                                    <th rowspan="2" width="5%">Total fines</th>
-                                    <th rowspan="2" width="5%">Total Arrests</th>
-                                </tr>
-                                <tr>
-                                    <th width="5%">Rolls</th>
-                                    <th width="5%">Plants</th>
-                                    <th width="5%">Brooms</th>
-                                    <th width="5%">Stones</th>
-                                    <th width="5%">Kgs</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                while ($row = mysqli_fetch_array($result))
-                                {
-                                    ?>
-                                    <tr>
-                                        <td><?php echo $row["county"];?></td>
-                                        <td><?php echo $row["changaa"];?></td>
-                                        <td><?php echo $row["kangara"];?></td>
-                                        <td><?php echo $row["t_drinks"];?></td>
-                                        <td><?php echo $row["spirits"];?></td>
-                                        <td><?php echo $row["counterfeit"];?></td>
-                                        <td><?php echo $row["rolls"];?></td>
-                                        <td><?php echo $row["plants"];?></td>
-                                        <td><?php echo $row["brooms"];?></td>
-                                        <td><?php echo $row["stones"];?></td>
-                                        <td><?php echo $row["kgs"];?></td>
-                                        <td><?php echo $row["cocaine"];?></td>
-                                        <td><?php echo $row["fines"];?></td>
-                                        <td><?php echo $row["arrests"];?></td>
-
-                                    </tr>
-                                    <?php
-                                }
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered" id="dataTable" cellspacing="0">
+                            <thead>
+                            <tr>
+                                <th width="4%">County</th>
+                                <th width="4%">Chang'aa(Lts)</th>
+                                <th width="4%">Kangara(Lts)</th>
+                                <th width="4%">Other Traditional Drinks(Lts)</th>
+                                <th width="4%">Alcohol poured/Destroyed(Lts)</th>
+                                <th width="4%">Equipment Destroyed</th>
+                                <th width="4%">2nd Generation Liqour</th>
+                                <th width="4%">Illegal Ethanol(Lts)</th>
+                                <th width="4%">Bhang Rolls</th>
+                                <th width="4%">Bhang Plants</th>
+                                <th width="4%">Bhang Brooms</th>
+                                <th width="4%">Bhang Stones</th>
+                                <th width="4%">Bhang Kgs</th>
+                                <th width="4%">Cocaine, Heroin and Others(Sachets)</th>
+                                <th width="4%">Total Arrests</th>
+                                <th width="4%">Number Charged</th>
+                                <th width="4%">Total fines(Ksh)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            while ($row = mysqli_fetch_array($result))
+                            {
                                 ?>
-                                </tbody>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
+                                <tr>
+                                    <td><?php echo $row["county"];?></td>
+                                    <td><?php echo $row["changaa"];?></td>
+                                    <td><?php echo $row["kangara"];?></td>
+                                    <td><?php echo $row["t_drinks"];?></td>
+                                    <td><?php echo $row["alcohol_poored"];?></td>
+                                    <td><?php echo $row["equipment"];?></td>
+                                    <td><?php echo $row["spirits"];?></td>
+                                    <td><?php echo $row["ethanol"];?></td>
+                                    <td><?php echo $row["rolls"];?></td>
+                                    <td><?php echo $row["plants"];?></td>
+                                    <td><?php echo $row["brooms"];?></td>
+                                    <td><?php echo $row["stones"];?></td>
+                                    <td><?php echo $row["kgs"];?></td>
+                                    <td><?php echo $row["cocaine"];?></td>
+                                    <td><?php echo $row["arrests"];?></td>
+                                    <td><?php echo $row["number_charged"];?></td>
+                                    <td><?php echo $row["fines"];?></td>
+
+                                </tr>
+                                <?php
+                            }
+                            ?>
+                            </tbody>
+                            <tbody>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
